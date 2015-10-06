@@ -1,6 +1,7 @@
 # Memcached cache slam solution 
 
 Emulate lock in Memcached
+
 Solves the problem described [here](http://cmyker.blogspot.com/2015/10/memcached-lock.html).
 
 Usage example
