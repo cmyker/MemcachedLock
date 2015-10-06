@@ -6,9 +6,8 @@ Solves the problem described [here](http://cmyker.blogspot.com/2015/10/memcached
 Usage example
 
 ```
-/* @var MemcachedPersist $memcachedPersist */
-$memcachedPersist = new \Cmyker\MemcachedPersist\Service;
-$item = $memcachedPersist->getItem($key, $expirationSec, $ttlSec);
+$memcachedLock = new \Cmyker\MemcachedLock\Service;
+$item = $memcachedLock->getItem($key, $expirationSec, $ttlSec);
 $result = null;
 if ($item->isExpired()) {
     $item->getLockAndUpdate(function() use (&$result, $cacheUpdateCallback) {
