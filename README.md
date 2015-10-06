@@ -5,7 +5,7 @@ Solves the problem described [here](http://cmyker.blogspot.com/2015/10/memcached
 
 Usage example
 
-```
+```php
 $memcachedLock = new \Cmyker\MemcachedLock\Service;
 $item = $memcachedLock->getItem($key, $expirationSec, $ttlSec);
 $result = null;
